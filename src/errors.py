@@ -235,8 +235,7 @@ def register_custom_errors(app:FastAPI):
             return JSONResponse(
                 content={
                     "error": "Internal Server Error",
-                    "message": "Something went wrong on the server.",
-                    "details":str(exc)
+                    "message": "Something went wrong on the server."
                 },
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
@@ -248,5 +247,5 @@ def register_custom_errors(app:FastAPI):
                     "error": "Internal Server Error",
                     "message": "Opps Something went wrong on the server."
                 },
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+                status_code=status.HTTP_404_NOT_FOUND
             ) 
