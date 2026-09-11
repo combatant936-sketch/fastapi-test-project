@@ -15,7 +15,7 @@ from src.middlewares import register_middlewares
 @asynccontextmanager
 async def life_span_bro(app:FastAPI):
     print("server is running")
-    await init_db()
+    # await init_db()
     yield
     print("server is shutting down")
 
