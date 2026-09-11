@@ -1,0 +1,79 @@
+{
+  "operation": "GET /api/v1/books/",
+  "method": "GET",
+  "path_template": "/api/v1/books/",
+  "fingerprint": "bf27f31d",
+  "case_id": "UJEYMk",
+  "code_sample": "curl -X GET http://127.0.0.1:8001/api/v1/books/",
+  "sequence": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8001/api/v1/books/",
+      "url_template": "http://127.0.0.1:8001/api/v1/books/",
+      "headers": {
+        "User-Agent": "schemathesis/4.26.1",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept": "*/*",
+        "Connection": "keep-alive",
+        "X-Schemathesis-TestCaseId": "UJEYMk"
+      },
+      "response": {
+        "status_code": 401,
+        "headers": {
+          "date": "Fri, 11 Sep 2026 13:31:36 GMT",
+          "server": "uvicorn",
+          "www-authenticate": "[Filtered]",
+          "content-length": "30",
+          "content-type": "application/json"
+        },
+        "body": "{\"detail\":\"Not authenticated\"}"
+      },
+      "link": null,
+      "checks": [
+        {
+          "name": "status_code_conformance",
+          "status": "failure",
+          "message": "Undocumented HTTP status code\n\nReceived: 401\nDocumented: 200"
+        }
+      ],
+      "meta": {
+        "generation": {
+          "time": 1.2700002116616815e-05,
+          "mode": "negative"
+        },
+        "components": {
+          "HEADER": "negative"
+        },
+        "phase": {
+          "name": "coverage",
+          "data": {
+            "type": "CoveragePhaseData",
+            "description": "Missing `Authorization` at header",
+            "location": null,
+            "parameter": "Authorization",
+            "parameter_location": "HEADER",
+            "scenario": "missing_parameter"
+          }
+        },
+        "pool_draws": [],
+        "pool_misses": [],
+        "semantic_draws": [],
+        "dictionary_draws": [],
+        "constants_draws": [],
+        "raw_containers": {
+          "HEADER": {}
+        }
+      },
+      "path": "/api/v1/books/",
+      "path_parameters": {},
+      "query": {},
+      "case_headers": {},
+      "cookies": {},
+      "case_body": {
+        "encoding": "none"
+      },
+      "media_type": null,
+      "parent_index": null
+    }
+  ]
+}

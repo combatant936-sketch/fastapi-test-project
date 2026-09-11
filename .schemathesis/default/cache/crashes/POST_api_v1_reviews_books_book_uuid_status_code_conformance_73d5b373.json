@@ -1,0 +1,97 @@
+{
+  "operation": "POST /api/v1/reviews/books/{book_uuid}",
+  "method": "POST",
+  "path_template": "/api/v1/reviews/books/{book_uuid}",
+  "fingerprint": "73d5b373",
+  "case_id": "gdvDwB",
+  "code_sample": "curl -X POST -H 'Authorization: [Filtered]' http://127.0.0.1:8001/api/v1/reviews/books/e3e70682-c209-1cac-a29f-6fbed82c07cd",
+  "sequence": [
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8001/api/v1/reviews/books/e3e70682-c209-1cac-a29f-6fbed82c07cd",
+      "url_template": "http://127.0.0.1:8001/api/v1/reviews/books/{book_uuid}",
+      "headers": {
+        "User-Agent": "schemathesis/4.26.1",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept": "*/*",
+        "Connection": "keep-alive",
+        "Authorization": "[Filtered]",
+        "X-Schemathesis-TestCaseId": "gdvDwB",
+        "Content-Length": "0"
+      },
+      "response": {
+        "status_code": 401,
+        "headers": {
+          "date": "Fri, 11 Sep 2026 13:31:36 GMT",
+          "server": "uvicorn",
+          "www-authenticate": "[Filtered]",
+          "content-length": "30",
+          "content-type": "application/json"
+        },
+        "body": "{\"detail\":\"Not authenticated\"}"
+      },
+      "link": null,
+      "checks": [
+        {
+          "name": "status_code_conformance",
+          "status": "failure",
+          "message": "Undocumented HTTP status code\n\nReceived: 401\nDocumented: 200, 422"
+        }
+      ],
+      "meta": {
+        "generation": {
+          "time": 2.0699997548945248e-05,
+          "mode": "negative"
+        },
+        "components": {
+          "PATH": "positive",
+          "HEADER": "positive",
+          "BODY": "negative"
+        },
+        "phase": {
+          "name": "coverage",
+          "data": {
+            "type": "CoveragePhaseData",
+            "description": "Missing request body",
+            "location": null,
+            "parameter": null,
+            "parameter_location": "BODY",
+            "scenario": "missing_parameter"
+          }
+        },
+        "pool_draws": [],
+        "pool_misses": [
+          [
+            "path",
+            "book_uuid"
+          ]
+        ],
+        "semantic_draws": [],
+        "dictionary_draws": [],
+        "constants_draws": [],
+        "raw_containers": {
+          "PATH": {
+            "book_uuid": "e3e70682-c209-1cac-a29f-6fbed82c07cd"
+          },
+          "HEADER": {
+            "Authorization": "Bearer "
+          }
+        }
+      },
+      "path": "/api/v1/reviews/books/{book_uuid}",
+      "path_parameters": {
+        "book_uuid": "e3e70682-c209-1cac-a29f-6fbed82c07cd"
+      },
+      "query": {},
+      "case_headers": {
+        "Authorization": "[Filtered]"
+      },
+      "cookies": {},
+      "case_body": {
+        "encoding": "none"
+      },
+      "media_type": null,
+      "parent_index": null
+    }
+  ]
+}
